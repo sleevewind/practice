@@ -325,3 +325,94 @@ print(m.partition('fgh'))  # ('abcde', 'fgh', 'ijklmn')元组类型
 m = '2020.2.14不要打开.MP4'
 print(m.rpartition('.'))  # ('2020.2.14不要打开', '.', 'MP4')
 ```
+
+### 大小写
+
+```python
+print('hello world'.capitalize())  # 首字母大写
+print('hello'.upper())  # HELLO
+print('HELLO'.lower())  # hello
+print('hello world'.title())  # Hello World
+```
+
+### 空格处理
+
+```python
+# Ljust 字符串以指定长度显示, 默认在右边用空格补齐
+# Ljust(width, fillchar)
+print('Monday'.ljust(10, '*'))  # Monday****
+print('Monday'.rjust(10, '*'))  # ****Monday
+print('Monday'.center(10, '+'))  # ++Monday++
+
+print('    apple    '.lstrip())  # 去掉左边空格
+print('    apple    '.rstrip())  # 去掉右边空格
+print('    apple    '.strip())  # 去掉两边空格
+print('++++apple++++'.strip('+'))  # 去掉两边'+'
+
+# 将字符串分割成列表
+x = 'zhangsan,lisi,wangwu'
+print(x.split(','))#['zhangsan', 'lisi', 'wangwu']
+# 将列表转为字符串
+fruits = ['apple', 'pear', 'peach', 'orange']
+print('-'.join(fruits))  # apple-pear-peach-orange
+```
+
+## 字符集
+
+```python
+# 使用内置函数 chr 和 ord, unicode字符编码
+print(ord('a'))  # 97
+print(chr(26666))  # 株
+
+# 转化为指定字符集的结果
+# gbk 一个汉字两个字节 utf8一个汉字3个字节
+print('你'.encode('gbk'))  # b'\xc4\xe3' 0xc4e3
+print('你'.encode('utf8'))  # b'\xe4\xbd\xa0' 0e4bda0
+print(b'\xe4\xbd\xa0'.decode('utf8'))  # 你
+```
+
+## 成员运算符
+
+```python
+# in 和 not in 运算符
+# 用来判断一个内容在可迭代对象里是否存在
+
+word = 'hello'
+list = ['hello', 'world', 'love', 'you']
+print('e' in word)  # True
+print('hello' in list)  # True
+print('assassin' not in list)  # True
+```
+
+## 格式化打印
+
+```python
+# 可以使用 % 占位符表示格式化字符串
+name = 'Andrew'
+age = 18
+print('hello, I am ', name, ', ', age, ' years old', sep='')
+
+# %s ==> 字符串占位符
+# %d ==> 整数占位符
+# %f ==> 浮点数占位符
+print('hello, I am %s, %d years old, I earn $%f ' % (name, age, 3.14))
+
+# %nd ==> 整数占位符
+print('大家好, 我是%3d号男嘉宾' % 15)   #  15
+print('大家好, 我是%03d号男嘉宾' % 15)  # 005
+print('大家好, 我是%-3d号男嘉宾' % 15)  # 5
+
+# %.nf ==> 小数点后n位
+print('我今天挣了%.2f元钱' % 16.666666)  # 我今天挣了16.67元钱
+
+# %x, %X
+print(255) # 255
+print('%x' % 255)  # ff
+print('%X' % 255)  # FF
+
+# %%
+print('%%s %%d %d' % 16)  # %s %d 16
+```
+
+## format方法
+
