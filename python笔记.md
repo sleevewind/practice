@@ -18,7 +18,7 @@
 
 ![image-20201230170220687](images\image-20201230170220687.png) 
 
-![image-20201230170527110](C:\Users\sleevewind\AppData\Roaming\Typora\typora-user-images\image-20201230170527110.png) 
+![image-20201230170527110](images\image-20201230170527110.png) 
 
 ## 整数的表达方式
 
@@ -50,11 +50,11 @@
 
 # 标识符和关键字
 
-![image-20201230212224906](C:\Users\sleevewind\AppData\Roaming\Typora\typora-user-images\image-20201230212224906.png)
+![image-20201230212224906](images\image-20201230212224906.png) 
 
 print函数解释： 
 
-![image-20201230222239342](images/image-20201230222239342.png)
+![image-20201230222239342](images/image-20201230222239342.png) 
 
 # 输入语句的使用
 
@@ -439,3 +439,4 @@ q = {'name': 'zhangsan', 'age': 18, 'addr': 'shanghai'}
 p = 'hello I am {name}, {age} years old, come from {addr}'.format(**q)
 print(p)  # hello I am zhangsan, 18 years old, come from shanghai
 ```
+
