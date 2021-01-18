@@ -440,3 +440,44 @@ p = 'hello I am {name}, {age} years old, come from {addr}'.format(**q)
 print(p)  # hello I am zhangsan, 18 years old, come from shanghai
 ```
 
+# 列表
+
+## 列表的基本使用
+
+```python
+# 当有多个数据需要 按照一定顺序 保存的时候, 可以考虑列表
+
+# 使用 [] 表示一个列表, 每一个数据称为元素, 用逗号分隔
+namesList = ['关羽', '张飞', '刘备', '诸葛亮', '小乔', '大乔']
+
+# 可以下标访问, 切片
+print(namesList[2])
+namesList[2] = '貂蝉'
+print(namesList[2:5])
+
+# list(可迭代对象)
+names = ('关羽', '张飞', '刘备', '诸葛亮')
+print(list(names))  # ['关羽', '张飞', '刘备', '诸葛亮']
+```
+
+## 列表的插入
+
+```python
+# 操作列表, 一般包括 增删改查
+
+heroes = ['镜', '嬴政', '露娜', '娜可露露']
+
+# 添加元素的方法
+# append
+heroes.append('黄忠')
+print(heroes)  # 在列表最后面追加
+
+# insert(index, object) 在指定位置插入
+heroes.insert(1, '小乔')
+print(heroes)
+newHeroes = ['狄仁杰', '王昭君']
+
+# extend(iterable) 添加可迭代对象
+heroes.extend(newHeroes)
+print(heroes)
+```
