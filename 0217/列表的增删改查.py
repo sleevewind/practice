@@ -15,3 +15,6 @@ newHeroes = ['狄仁杰', '王昭君']
 # extend(iterable) 添加可迭代对象
 heroes.extend(newHeroes)
 print(heroes)
+
+# 删除元素 pop remove clear
+print(heroes)
