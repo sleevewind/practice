@@ -122,6 +122,31 @@ b = 0 or [] or {} or ()  # ()
 # &(与) |(或) ^(异或) <<(左移) >>(右移) ~(取反)
 ```
 
+## 交换两个变量值
+
+```python
+# 只能是数字
+a = 10
+b = 13
+a = a + b
+b = a - b
+a = a - b
+print(a)  # 13
+print(b)  # 10
+
+# 异或
+a = a ^ b
+b = a ^ b
+a = a ^ b
+print(a)  # 13
+print(b)  # 10
+
+# python特有
+a, b = b, a
+print(a)  # 13
+print(b)  # 10
+```
+
 # 分支语句
 
 ## 条件语句
@@ -526,3 +551,41 @@ print(flag)  # True
 heroes[1] = '镜'
 print(heroes)  # ['镜', '镜', '镜', '露娜', '娜可露露', '黄忠', '狄仁杰']
 ```
+
+## 列表的遍历
+
+```python
+# while 循环, for in循环
+heroes = ['镜', '小乔', '露娜', '娜可露露', '黄忠', '狄仁杰']
+
+for hero in heroes:
+    print(hero, end=' ')
+
+i = 0
+while i < len(heroes):
+    print(heroes[i], end=' ')
+    i += 1
+```
+
+## 列表的排序和反转
+
+```python
+# sort()直接对列表排序
+nums = [6, 5, 3, 1, 8, 7, 2, 4]
+nums.sort()
+print(nums)  # [1, 2, 3, 4, 5, 6, 7, 8]
+nums.sort(reverse=True)
+print(nums)  # [8, 7, 6, 5, 4, 3, 2, 1]
+
+# sorted()内置函数, 返回新的列表, 不改变原来的列表
+print(sorted(nums))  # [1, 2, 3, 4, 5, 6, 7, 8]
+
+# reverse()
+nums = [6, 5, 3, 1, 8, 7, 2, 4]
+nums.reverse()
+print(nums)  # [4, 2, 7, 8, 1, 3, 5, 6]
+```
+
+## (*)列表的复制
+
+![image-20210120235628023](images/image-20210120235628023.png) 
